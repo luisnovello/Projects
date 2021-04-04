@@ -1,0 +1,307 @@
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	/* vertical-align: baseline; */
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CSS HEX */
+/* --oxford-blue: #01012aff;
+--gray-x-11-gray: #bfbdc1ff;
+--purple-plum: #a755c2ff;
+--crimson: #d91e36ff;
+--skobeloff: #096b72ff
+
+
+#
+; */
+
+body{
+    padding-top: 11rem;
+}
+
+#page-header{
+    position: fixed;
+    top: 0;
+    height: 10rem;
+    width: 100%;
+}
+#page-title{
+    top: 0;
+    display: flex;
+    font-size: 5em;
+    background-color: #0b0c10;
+    color: #66fcf1;
+    width: 100%;
+    height: 75%;
+    justify-content: center;
+    align-self: center;
+    font-family: 'New Tegomin';
+}
+#nav{
+    display: flex;
+    justify-content:space-evenly;
+    align-self: center;
+    background-color: #246663;
+    height: 25%;
+    box-shadow: 0px 15px 20px -9px #0b0c10;    
+    border-bottom: solid 1px #0b0c10;
+}
+.header-button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 25px;
+    /* font-family: 'New Tegomin', serif; */
+    font-family: 'Montserrat', sans-serif;
+}
+.header-button:hover{
+    text-decoration: black underline solid 2px;
+}
+#popout-modals{
+    position: fixed;
+    top: 30%;
+    left: 40%;
+    font-size: 25px;
+}
+.form-header{
+    right: 15px;
+    top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    color: #66fcf1;
+    font-family: 'New Tegomin';
+}
+.submit{
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+}
+.header-text{
+    margin-right: 40%;
+    text-decoration: solid #66fcf1 1px underline;
+}
+.no-display{
+    display: none;
+}
+input{
+    margin-top: 15px;
+    float: right;
+    margin-right: 10%;
+}
+label{
+    text-decoration: solid white 1px underline;
+    margin-top: 20px;
+    float: left;
+    clear: both;
+}
+textarea{
+    margin-top: 15px;
+    float: right;
+    margin-right: 10%;
+}
+input[type="radio"]{
+    margin-right: 450px;
+    margin-top: 1em;
+}
+#login{
+    height: 250px;
+    width: 500px;
+    background-color: #0b0c10;
+    padding: 10px;
+    color: white;
+    font-family: 'New Tegomin';
+}
+#register-user{
+    height: 250px;
+    width: 500px;
+    background-color: #0b0c10;
+    padding: 10px;
+    color: white;
+    font-family: 'New Tegomin';
+
+}
+#new-post-modal{
+    position: fixed;
+    top: 20%;
+    height: 600px;
+    width: 550px;
+    background-color: #0b0c10;
+    padding: 10px;
+    color: white;
+    font-family: 'New Tegomin';
+}
+#edit-posts{
+    position: fixed;
+    top: 20%;
+    height: 600px;
+    width: 550px;
+    background-color: #0b0c10;
+    padding: 10px;
+    color: white;
+    font-family: 'New Tegomin';
+}
+#create-message{
+    height: 400px;
+    width: 500px;
+    background-color: #0b0c10;
+    color: white;
+    font-family: 'New Tegomin';
+}
+#profile-page{
+    background-color: white;
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr 10fr;
+    grid-column: auto;              
+}
+.all-post-style{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minMax(400px, 1fr)) ;
+    padding: 5px;
+}
+.users-posts-style{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minMax(400px, 1fr)) ;
+    padding: 5px;
+}
+.post-card{
+    color: #0b0c10;
+    background-color: #c5c6c7;
+    margin: 10px;
+    height: auto;
+    font-size: 20px;
+    border: #0b0c10 solid 1px;
+    box-shadow: 0px 15px 20px -9px #0b0c10; 
+}
+.post-title{
+    background-color: #246663;
+    font-size: 30px;
+    color: white;
+    font-family: 'New Tegomin';
+    padding-left: 10px;
+}
+.post-description{
+    overflow: auto;
+    min-height: 30px;
+    max-height: 80px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+.post-footer{
+    display: flex;
+    justify-content: flex-end;
+}
+.post-body{
+    margin-left: 10px;
+}
+.post-card button{
+    background-color: #246663;
+    color: white;
+    border: solid black 1px;
+    margin: 5px;
+}
+.user-messages-style{
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: #0b0c10; */    
+    font-size: 30px;
+}
+#messages-body{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 10px;
+}
+#received-messages{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 2rem;
+    height: 400px;
+}
+#sent-messages{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 2rem;
+    margin-right: 10px;
+    height: 400px;
+}
+.message-card{
+    color: #0b0c10;
+    background-color: #c5c6c7;
+    margin-left: 10px;
+    font-size: 20px;
+    border: #0b0c10 solid 1px;
+    box-shadow: 0px 15px 20px -9px #0b0c10;
+    height: 200px;
+}
+.message-title{
+    background-color: #246663;
+    font-size: 30px;
+    color: white;
+    font-family: 'New Tegomin';
+    padding-left: 10px;
+    height: 40px;
+}
+.message-content{
+    padding-left: 10px;
+}
+#messages-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    background-color: #0b0c10;
+    color: #66fcf1;
+    height: 50px;
+    font-family: 'New Tegomin', serif;
+}
+#received-title{
+    margin-left: 25px;
+}
+#sent-title{
+    margin-left: 36%;
+}
+.message-sender{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
